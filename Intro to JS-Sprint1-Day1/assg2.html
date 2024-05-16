@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    //1.
+    function printName(name) {
+    console.log(name);
+}
+
+// Ex:
+printName("John"); //Output: John
+
+
+//2.
+
+function printDynamicType(value) {
+    console.log(typeof value);
+}
+
+// Ex
+printDynamicType(10); // Output: number
+printDynamicType("Hello"); //Output: string
+
+
+//3.
+function printDataType(value) {
+    console.log(typeof value);
+}
+
+// Ex
+printDataType("Hello"); // Expected Output: string
+printDataType(10); // Expected Output: number
+printDataType(true); // Expected Output: boolean
+printDataType([1, 2, 3]); // Expected Output: object
+printDataType({ key: "value" }); // Expected Output: object
+printDataType(null); // Expected Output: object
+printDataType(undefined); // Expected Output: undefined
+
+
+//4.
+function printNullableType(value) {
+    if (value === null) {
+        console.log("null");
+    } else if (value === undefined) {
+        console.log("undefined");
+    } else {
+        console.log(typeof value);
+    }
+}
+
+// Ex
+printNullableType(null); // Expected Output: null
+printNullableType(undefined); // Expected Output: undefined
+printNullableType("Hello"); // Expected Output: string
+printNullableType(10); // Expected Output: number
+
+
+//5.
+function checkTruthy(value) {
+    console.log(!!value);
+}
+
+// Ex
+checkTruthy(""); // Expected Output: false
+checkTruthy(0); // Expected Output: false
+checkTruthy(null); // Expected Output: false
+checkTruthy(undefined); // Expected Output: false
+checkTruthy("Hello"); // Expected Output: true
+checkTruthy(10); // Expected Output: true
+checkTruthy({}); // Expected Output: true
+
+
+//6.
+function generateMessage(name, age, language) {
+    console.log(`My name is ${name}, I am ${age} years old, and my favorite programming language is ${language}.`);
+}
+
+// Ex
+generateMessage("John", 25, "JavaScript"); // Expected Output: My name is John, I am 25 years old, and my favorite programming language is JavaScript.
+
+
+
+
+</script>
+</html>
