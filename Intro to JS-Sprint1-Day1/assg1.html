@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to JS-Sprint1-Day1</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    
+
+//1. calculateArea
+
+function calculateArea(length, width) {
+    return length * width;
+}
+
+// Ex:
+console.log(calculateArea(5, 4)); //Output: 20
+
+
+//2. Handling Null and Undefined: checkValue
+
+function checkValue(value) {
+    if (value === null) {
+        return 'Value is null.';
+    } else if (value === undefined) {
+        return 'Value is undefined.';
+    } else {
+        return 'Value is valid.';
+    }
+}
+
+// Ex:
+console.log(checkValue(null)); //Output: null
+console.log(checkValue(undefined)); //Output:undefined
+console.log(checkValue(10)); //Output: valid
+
+
+
+
+// 3. generateEmail
+function generateEmail(name, domain) {
+    
+    let email = name.toLowerCase().split(' ').join('.');
+    return `${email}@${domain}`;
+}
+
+// Example Invocation:
+console.log(generateEmail("John Doe", "example.com")); //Output: john.doe@example.com
+
+
+// 4. Checker Function: checkType
+function checkType(value) {
+    if (Array.isArray(value)) {
+        return 'Type: Array';
+    } else if (value === null) {
+        return 'Type: Null';
+    } else if (value === undefined) {
+        return 'Type: Undefined';
+    } else {
+        return `Type: ${typeof value}`;
+    }
+}
+
+// Ex:
+console.log(checkType([1, 2, 3])); //Output: Type: Array
+console.log(checkType(null)); //Output: Type: Null
+console.log(checkType(undefined)); //Output: Type: Undefined
+console.log(checkType(42)); //Output: Type: number
+console.log(checkType({})); //Output: Type: object
+
+
+//5. composeMessage
+
+function composeMessage(name, age, city) {
+    return `Hello ${name}, you are ${age} years old and live in ${city}.`;
+}
+
+// Ex:
+console.log(composeMessage("John", 25, "New York")); // Output: Hello John, you are 25 years old and live in New York
+
+
+</script>
+</html>
